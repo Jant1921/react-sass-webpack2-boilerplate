@@ -1,0 +1,10 @@
+@import 'reset';
+
+html, body, #root, .app{
+	height: 100%;
+	width: 100%;
+}
+
+@import 'variables';
+@import 'home-page';
+@import 'page-two';
