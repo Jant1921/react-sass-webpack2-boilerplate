@@ -1,5 +1,5 @@
 {
-  "name": "React boilerplate",
+  "name": "react-boilerplate",
   "description": "A React boilerplate with SASS, Router and Webpack 2", 
   "version": "0.0.1",
   "license": "MIT",

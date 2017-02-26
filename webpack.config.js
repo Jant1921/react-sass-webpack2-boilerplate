@@ -1,5 +1,9 @@
 /*
     ./webpack.config.js
+    Code based on 
+    https://scotch.io/tutorials/setup-a-react-environment-using-webpack-and-babel
+    and
+    https://brotzky.co/blog/code-splitting-react-router-webpack-2/
 */
 
 const webpack = require('webpack');
@@ -22,27 +26,12 @@ const CommonsChunkPluginConfig = new webpack.optimize.CommonsChunkPlugin({
   minChunks: Infinity,
   filename: '[name].[hash].js',
 });
-/*
-module.exports = {
-  entry: './src/index.js',
-  output: {
-    path: path.resolve('dist'),
-    filename: 'index_bundle.js'
-  },
-  module: {
-    loaders: [
-      { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
-      { test: /\.jsx$/, loader: 'babel-loader', exclude: /node_modules/ },
-      { test: /\.scss$/, loader: 'style-loader!css-loader!sass-loader'}
-    ]
-  },
-  plugins: [HtmlWebpackPluginConfig]
-}
 
-*/
 
 module.exports = env =>{
-  return{// entry tells webpack where to start looking
+
+  return{
+      // entry tells webpack where to start looking
       entry: {
         app: path.join(__dirname, './src/'),
         vendor: ['react', 'react-dom', 'react-router'],
